@@ -154,7 +154,7 @@ class EloquentJoinBuilder extends Builder
     public function orderBy($column, $direction = 'asc')
     {
         $dotPos = strrpos($column, '.');
-        if($dotPos !== -1){
+        if($dotPos > 0){
             list($relationName, $relationAttribute) = explode('.', $column);
             $table = $this->getModel()->getTable();
             if ($relationName === '$') {
