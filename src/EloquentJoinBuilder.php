@@ -143,6 +143,30 @@ class EloquentJoinBuilder extends Builder
     }
 
     /**
+     * Add an "order by" clause to the query.
+     *
+     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Query\Expression|string  $column
+     * @param  string  $direction
+     * @return \Illuminate\Database\Query\Builder
+     *
+     * @throws \InvalidArgumentException
+     */
+    public function orderBy($column, $direction = 'asc')
+    {
+        $dotPos = strrpos($column, '.');
+        if($dotPos !== -1){
+            list($relationName, $relationAttribute) = explode('.', $column);
+            $table = $this->getModel()->getTable();
+            if ($relationName === '$') {
+                $column = $relationAttribute;
+                return parent::orderBy("{$table}.{$column}", $direction);
+            }
+            return $this->orderByJoin($column, $direction);
+        }
+        return parent::orderBy($column, $direction);
+    }
+
+    /**
      * Joining relations.
      *
      * @param string|array $relations
