@@ -157,7 +157,7 @@ class EloquentJoinBuilder extends Builder
         if($dotPos > 0){
             list($relationName, $relationAttribute) = explode('.', $column);
             $table = $this->getModel()->getTable();
-            if ($relationName === '$') {
+            if ($relationName === '$' || $relationName === $table) {
                 $column = $relationAttribute;
                 return parent::orderBy("{$table}.{$column}", $direction);
             }
