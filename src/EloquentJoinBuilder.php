@@ -315,7 +315,7 @@ class EloquentJoinBuilder extends Builder
 
     private function applyClauseOnRelation(JoinClause $join, string $method, array $params, string $relatedTableAlias)
     {
-        if (in_array($method, ['where', 'orWhere'])) {
+        if (in_array($method, ['where', 'orWhere', 'whereDate', 'orWhereDate'])) {
             try {
                 if (is_array($params[0])) {
                     foreach ($params[0] as $k => $param) {
