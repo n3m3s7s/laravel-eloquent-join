@@ -1,6 +1,6 @@
 <?php
 
-namespace Fico7489\Laravel\EloquentJoin\Exceptions;
+namespace VertigoStack\Laravel\EloquentJoin\Exceptions;
 
 class InvalidDirection extends \Exception
 {

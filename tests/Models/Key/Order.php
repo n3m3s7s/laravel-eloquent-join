@@ -1,8 +1,8 @@
 <?php
 
-namespace Fico7489\Laravel\EloquentJoin\Tests\Models\Key;
+namespace VertigoStack\Laravel\EloquentJoin\Tests\Models\Key;
 
-use Fico7489\Laravel\EloquentJoin\Tests\Models\BaseModel;
+use VertigoStack\Laravel\EloquentJoin\Tests\Models\BaseModel;
 
 class Order extends BaseModel
 {

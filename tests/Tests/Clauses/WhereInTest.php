@@ -1,9 +1,9 @@
 <?php
 
-namespace Fico7489\Laravel\EloquentJoin\Tests\Tests\Clauses;
+namespace VertigoStack\Laravel\EloquentJoin\Tests\Tests\Clauses;
 
-use Fico7489\Laravel\EloquentJoin\Tests\Models\Order;
-use Fico7489\Laravel\EloquentJoin\Tests\TestCase;
+use VertigoStack\Laravel\EloquentJoin\Tests\Models\Order;
+use VertigoStack\Laravel\EloquentJoin\Tests\TestCase;
 
 class WhereInTest extends TestCase
 {

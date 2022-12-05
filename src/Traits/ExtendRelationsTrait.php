@@ -1,10 +1,10 @@
 <?php
 
-namespace Fico7489\Laravel\EloquentJoin\Traits;
+namespace VertigoStack\Laravel\EloquentJoin\Traits;
 
-use Fico7489\Laravel\EloquentJoin\Relations\BelongsToJoin;
-use Fico7489\Laravel\EloquentJoin\Relations\HasManyJoin;
-use Fico7489\Laravel\EloquentJoin\Relations\HasOneJoin;
+use VertigoStack\Laravel\EloquentJoin\Relations\BelongsToJoin;
+use VertigoStack\Laravel\EloquentJoin\Relations\HasManyJoin;
+use VertigoStack\Laravel\EloquentJoin\Relations\HasOneJoin;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 

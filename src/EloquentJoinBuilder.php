@@ -1,16 +1,16 @@
 <?php
 
-namespace Fico7489\Laravel\EloquentJoin;
+namespace VertigoStack\Laravel\EloquentJoin;
 
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidAggregateMethod;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidDirection;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidRelation;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidRelationClause;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidRelationGlobalScope;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidRelationWhere;
-use Fico7489\Laravel\EloquentJoin\Relations\BelongsToJoin;
-use Fico7489\Laravel\EloquentJoin\Relations\HasManyJoin;
-use Fico7489\Laravel\EloquentJoin\Relations\HasOneJoin;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidAggregateMethod;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidDirection;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidRelation;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidRelationClause;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidRelationGlobalScope;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidRelationWhere;
+use VertigoStack\Laravel\EloquentJoin\Relations\BelongsToJoin;
+use VertigoStack\Laravel\EloquentJoin\Relations\HasManyJoin;
+use VertigoStack\Laravel\EloquentJoin\Relations\HasOneJoin;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\Relation;
@@ -281,7 +281,10 @@ class EloquentJoinBuilder extends Builder
 
         if (!$this->selected && count($relations) > 1) {
             $this->selected = true;
-            $this->selectRaw($baseTable.'.*');
+            $sql = $this->toSql();
+            if(!str_contains($sql, "`$baseTable`.*")){
+                $this->selectRaw($baseTable.'.*');
+            }
             $this->groupBy($baseTable.'.'.$basePrimaryKey);
         }
 

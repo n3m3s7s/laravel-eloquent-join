@@ -1,16 +1,16 @@
 <?php
 
-namespace Fico7489\Laravel\EloquentJoin\Tests\Tests;
+namespace VertigoStack\Laravel\EloquentJoin\Tests\Tests;
 
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidAggregateMethod;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidDirection;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidRelation;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidRelationClause;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidRelationGlobalScope;
-use Fico7489\Laravel\EloquentJoin\Exceptions\InvalidRelationWhere;
-use Fico7489\Laravel\EloquentJoin\Tests\Models\City;
-use Fico7489\Laravel\EloquentJoin\Tests\Models\Seller;
-use Fico7489\Laravel\EloquentJoin\Tests\TestCase;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidAggregateMethod;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidDirection;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidRelation;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidRelationClause;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidRelationGlobalScope;
+use VertigoStack\Laravel\EloquentJoin\Exceptions\InvalidRelationWhere;
+use VertigoStack\Laravel\EloquentJoin\Tests\Models\City;
+use VertigoStack\Laravel\EloquentJoin\Tests\Models\Seller;
+use VertigoStack\Laravel\EloquentJoin\Tests\TestCase;
 
 class ExceptionTest extends TestCase
 {

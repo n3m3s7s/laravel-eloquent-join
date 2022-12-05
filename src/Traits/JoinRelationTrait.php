@@ -1,8 +1,8 @@
 <?php
 
-namespace Fico7489\Laravel\EloquentJoin\Traits;
+namespace VertigoStack\Laravel\EloquentJoin\Traits;
 
-use Fico7489\Laravel\EloquentJoin\EloquentJoinBuilder;
+use VertigoStack\Laravel\EloquentJoin\EloquentJoinBuilder;
 
 trait JoinRelationTrait
 {
