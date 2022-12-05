@@ -1,5 +1,5 @@
 {
-    "name": "vertigo-stack/laravel-eloquent-join",
+    "name": "n3m3s7s/laravel-eloquent-join",
     "description": "This package introduces the join magic for eloquent models and relations.",
     "keywords": [
         "laravel join",
